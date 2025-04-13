@@ -36,8 +36,8 @@ const FIVEM_SERVER_PORT = '30120'; // Puerto del servidor FiveM
 
 // Configuración de Passport con Steam
 passport.use(new SteamStrategy({
-    returnURL: 'http://localhost:3000/auth/steam/return',
-    realm: 'http://localhost:3000/',
+    returnURL: 'https://barriosur.vercel.app/auth/steam/return',
+    realm: 'https://barriosur.vercel.app/',
     apiKey: '26C957763C3E64B85D563498656D2BD1' // Reemplaza con tu API Key de Steam
   },
   function(identifier, profile, done) {
