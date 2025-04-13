@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barrio Sur</title>
+        <link rel="stylesheet" href="dashboard.css">
+        <!-- Agregar FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>    
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Barrio Sur</div>
+        <ul class="nav-links">
+            <li><a href="/perfil/dashboard">Inicio</a></li>
+            <li><a href="#">Normativas</a></li>
+            <li><a href="/tienda/inicio">Tienda</a></li>
+            <li class="user-info">
+                <a href="/perfil/dashboard" id="name"></a>
+                <img id="avatar" src="https://via.placeholder.com/40" alt="Usuario">
+            </li>
+        </ul>
+    </nav>   
+
+    <div class="panels">
+        <div class="panel left-panel">
+            <div class="user-info-panel">
+                <img id="avatar2" src="https://via.placeholder.com/90" alt="Usuario">
+                <div class="user-text">
+                    <p id="fullname" class="user-name">cargando</p>
+                    <p id="user-job" class="user-status"></p>
+                </div>
+            </div>
+        </div>                  
+        <div class="panel center-panel">
+            <div class="user-info-panel">
+                <!-- Jugadores en línea -->
+                <i class="fa-solid fa-spinner" id="iconclass"></i>
+                <p class="server-online-text">Servidor <b id="severtstatus">Offline</b></p>
+            </div>
+        </div>    
+        <div class="panel right-panel">
+            <div class="user-info-panel">
+                <!-- Jugadores en línea -->
+                <i class="fa-solid fa-user" id="iconclassplayer"></i>
+                <p class="online-players-count">0/0</p>
+                <p class="players-online-text">conectados</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-panels">
+        <div class="large-panel" id="largePanel">
+            <div class="no-mafia-text">DEBES SELECCIONAR UNA OPCION</div>
+        </div>
+                                             
+        <div class="small-panel">
+            <ul class="option-list">
+                <li class="option-item" id="otheropcion">
+                    <a href="/perfil/info" style="text-decoration: none;">
+                        <span>                        <i class="fa-solid fa-circle-info"></i>  Informacion</span>
+                    </a>
+                </li>
+                <li class="option-item" id="otheropcion">
+                    <a href="/perfil/estadisticas" style="text-decoration: none;">
+                        <i class="fa-solid fa-signal" style="text-decoration: none;"></i>
+                        <span>estadisticas</span>
+                    </a>
+                </li>
+                <li class="option-item" id="otheropcion">
+                    <a href="/perfil/bienes" style="text-decoration: none;">
+                        <i class="fa-solid fa-car"></i>
+                        <span>Bienes</span>
+                    </a>
+                </li>
+                <li class="option-item" id="otheropcion">
+                    <a href="/perfil/org" style="text-decoration: none;">
+                        <i class="fa-solid fa-user-ninja"></i>
+                        <span>Organizacion</span>
+                    </a>
+                </li>
+                <li class="option-item"  id="quit">
+                    <a onclick="logout()" style="text-decoration: none;">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Salir</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>  
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Barrio Sur Roleplay</p>
+            <div class="social-buttons">
+                <a href="https://www.tiktok.com" target="_blank" class="social-button tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://discord.com" target="_blank" class="social-button discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+        </div>
+    </footer>      
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

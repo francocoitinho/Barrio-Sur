@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Steam_logo.png/800px-Steam_logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <div class="text-content">
+                <span class="text1" id="emoji-text">BIENVENID@, 😊</span><br><br>
+                <span class="store-title" id="store-title" style="display: none;">Barrio Sur</span><br>
+                <a href="/auth/steam" class="login-button" id="login-btn" style="display: none;">
+                    <i class="fab fa-steam"></i> Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const emojis = ['😂', '😋', '🤨', '🙄', '😎', '🤩'];
+        let index = 0;
+
+        setInterval(() => {
+            document.getElementById('emoji-text').innerHTML = `BIENVENID@, ${emojis[index]}`;
+            index = (index + 1) % emojis.length;
+        }, 1500);
+
+        setTimeout(() => {
+            document.getElementById('emoji-text').classList.add('fadeOut');
+            setTimeout(() => {
+                document.getElementById('emoji-text').style.display = 'none';
+                document.getElementById('store-title').style.display = 'block';
+                document.getElementById('store-title').classList.add('fadeIn');
+                document.getElementById('login-btn').style.display = 'inline-block';
+                document.getElementById('login-btn').classList.add('fadeIn');
+            }, 1000);
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barrio Sur</title>
+        <link rel="stylesheet" href="/perfil/error/error.css">
+        <!-- Agregar FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>    
+<body>  
+
+    <nav class="navbar">
+        <div class="logo">Barrio Sur</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Normativas</a></li>
+            <li><a href="/tienda/inicio">Tienda</a></li>
+            <li class="user-info">
+                <a href="#" id="nombreSteam"></a>
+                <img id="avatarSteam" src="https://via.placeholder.com/40" alt="Usuario" onclick="toggleMenu()">
+                <!-- Sub menú para cerrar sesión -->
+                <div id="subMenu" class="sub-menu">
+                    <ul>
+                        <li><a href="#" onclick="logout()" id="cerrarSesion"><i class="fa-solid fa-sign-out-alt"></i> Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>   
+
+    <div class="panel2">
+        <h2><i class="fa-brands fa-steam"></i> ¡BIENVENIDO @<span id="nombreSteam2"></span>!</h2>
+    </div>
+
+    <div class="panel">
+        <h2><i class="fa-solid fa-xmark"></i> NO TIENES UN PERSONAJE CREADO</h2>
+    </div>
+
+    <script>
+        // Toggle para mostrar/ocultar el submenú
+        function toggleMenu() {
+            const menu = document.getElementById('subMenu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Acción al hacer clic en "Cerrar sesión"
+        function logout() {
+    alert("Cerrando sesión...");
+    fetch('/logout')
+        .then(() => window.location.href = '/');
+}
+
+        // Cargar los datos del usuario
+        fetch('/perfil/getNombre')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('nombreSteam').textContent = data.nombre;
+                document.getElementById('nombreSteam2').textContent = data.nombre;
+                document.getElementById('avatarSteam').src = data.avatar;  // Imagen por defecto si no hay avatar
+            })
+            .catch(error => console.error('Error al obtener los datos del usuario:', error));
+    </script>
+
+</body>
+</html>

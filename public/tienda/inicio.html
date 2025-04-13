@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eclipse Roleplay</title>
+        <link rel="stylesheet" href="inicio.css">
+        <!-- Agregar FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>    
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Ecplise Roleplay</div>
+        <ul class="nav-links">
+            <li><a href="/perfil/dashboard">Inicio</a></li>
+            <li><a href="#">Normativas</a></li>
+            <li><a href="/tienda/inicio">Tienda</a></li>
+            <li class="user-info">
+                <a href="/perfil/dashboard" id="name"></a>
+                <img id="avatar" src="https://via.placeholder.com/40" alt="Usuario">
+            </li>
+        </ul>
+    </nav>   
+
+    <div class="panel-container">
+        <a href="/tienda/vips" class="panel">
+            <i class="fas fa-star"></i>
+            <h3>Vips</h3>
+        </a>
+    
+        <a href="/tienda/vehiculos" class="panel">
+            <i class="fas fa-car"></i>
+            <h3>Vehículos</h3>
+        </a>
+    
+        <a href="/tienda/kits" class="panel">
+            <i class="fas fa-gift"></i>
+            <h3>Kits</h3>
+        </a>
+
+        <!-- Panel largo abajo -->
+        <div class="panel-large">
+
+            <div class="sub-panel">
+                <h4>SELECCIONA UNA CATEGORIA</h4>
+            </div>          
+
+        </div>
+    </div>
+
+    <script src="inicio.js"></script>
+
+</body>
+</html>

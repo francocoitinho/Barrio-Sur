@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barrio Sur</title>
+        <link rel="stylesheet" href="/tienda/vips/vips.css">
+        <!-- Agregar FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>    
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Barrio Sur</div>
+        <ul class="nav-links">
+            <li><a href="/perfil/dashboard">Inicio</a></li>
+            <li><a href="#">Normativas</a></li>
+            <li><a href="/tienda/inicio">Tienda</a></li>
+            <li class="user-info">
+                <a href="/perfil/dashboard" id="name"></a>
+                <img id="avatar" src="https://via.placeholder.com/40" alt="Usuario">
+            </li>
+        </ul>
+    </nav>   
+
+    <div class="panel-container">
+
+        <a href="/tienda/vips" class="panel">
+            <i class="fas fa-star"></i>
+            <h3>Vips</h3>
+        </a>
+    
+        <a href="/tienda/vehiculos" class="panel">
+            <i class="fas fa-car"></i>
+            <h3>Vehículos</h3>
+        </a>
+    
+        <a href="/tienda/kits" class="panel">
+            <i class="fas fa-gift"></i>
+            <h3>Kits</h3>
+        </a>
+
+        <!-- Panel largo abajo -->
+        <div class="panel-large">
+
+            <div class="sub-panel">
+                <img src="/tienda/vips/vip_basic.png" class="panel-icon" alt="Basic Icon">
+                <p>VIP Basic</p>
+                <p>$250 UYU - $6 USD </p>
+            </div>
+            
+            <div class="sub-panel">
+                <img src="/tienda/vips/vip_gold.png" class="panel-icon" alt="Basic Icon">
+                <p>VIP Gold</p>
+                <p>$350 UYU - $8 USD </p>
+            </div>
+
+            <div class="sub-panel">
+                <img src="/tienda/vips/vip_diamond.png" class="panel-icon" alt="Basic Icon">
+                <p>VIP Diamond</p>
+                <p>$500 UYU - $11 USD </p>
+            </div>
+
+            <div class="sub-panel">
+                <img src="/tienda/vips/vip_deluxe.png" class="panel-icon" alt="Basic Icon">
+                <p>VIP Deluxe</p>
+                <p>$650 UYU - $15 USD </p>
+            </div>
+
+            <div class="sub-panel">
+                <img src="/tienda/vips/vip_elegant.png" class="panel-icon" alt="Basic Icon">
+                <p>VIP Elegant</p>
+                <p>$750 UYU - $17 USD </p>
+            </div>
+
+            <div class="sub-panel">
+                <img src="/tienda/vips/vip_barrio.png" class="panel-icon" alt="Basic Icon">
+                <p>VIP Barrio</p>
+                <p>$1000 UYU - $23 USD </p>
+            </div>
+            
+<!-- MODAL COMPLETO -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <!-- Cambié el icono aquí -->
+        <i id="modal-icon" class="fas fa-check-square"></i> 
+        <h2 id="modal-title">Título del Panel</h2>
+        <p id="modal-price" class="modal-price">$0.00</p>
+        <p id="modal-desc">Aquí se mostrarán las características del panel seleccionado.</p>
+        <ul id="modal-features" class="modal-features"></ul>
+        <button class="mercado-btn">Mercado Pago</button>
+    </div>
+</div>            
+
+</div>
+</div>    
+
+<script src="/tienda/vips/vips.js"></script>
+
+</body>
+</html>
